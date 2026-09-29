@@ -1,0 +1,36 @@
+/* Selected D6 motif and public contact, scoped to the current homepage. */
+.home-current .home-hero-content { padding-top: 2.3rem; padding-bottom: 5.8rem; }
+.home-current .home-personal-motion {
+  position: relative;
+  grid-column: 1 / -1;
+  width: min(21rem, 100%);
+  aspect-ratio: 2.4;
+  margin: .25rem 0 .2rem;
+}
+.home-current .home-personal-motion[hidden] { display: none; }
+.home-current .home-personal-motion canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  mask-image: radial-gradient(ellipse at center, #000 48%, transparent 74%);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 48%, transparent 74%);
+}
+.home-current .home-hero-actions { margin-top: .2rem; }
+.home-current .contact-email { position: relative; display: flex; flex-wrap: wrap; align-items: center; column-gap: 1.1rem; min-width: 0; align-self: end; padding-block: 1.2rem; border-block: 1px solid var(--line); }
+.home-current .contact-email-label { display: block; margin-bottom: .7rem; color: var(--muted); font-size: .73rem; }
+.home-current .contact-email-address { display: flex; align-items: center; justify-content: space-between; gap: 1rem; max-width: 100%; min-height: 2.75rem; color: var(--ink-strong); font-size: clamp(1rem, 1.65vw, 1.3rem); letter-spacing: .015em; text-decoration: none; }
+.home-current .contact-email-address > span:first-child { overflow-wrap: anywhere; }
+.home-current .contact-email-address > span:last-child { flex: 0 0 auto; color: var(--accent); }
+.home-current .contact-email-address:hover { color: var(--accent); }
+.home-current .contact-email-address:focus-visible { outline: 2px solid var(--focus); outline-offset: 6px; }
+.home-current .contact-email-copy { flex: 0 0 auto; min-height: 2.75rem; padding: .4rem .8rem; border: 1px solid var(--line-strong); border-radius: 2px; background: transparent; color: var(--ink-strong); font: inherit; font-size: .78rem; cursor: pointer; }
+.home-current .contact-email-copy[hidden] { display: none; }
+.home-current .contact-email-copy:hover { background: #bdd0bd14; border-color: var(--accent); }
+.home-current .contact-email-copy:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
+.home-current .contact-email-copy[aria-busy="true"] { opacity: .65; cursor: wait; }
+.home-current .contact-copy-status { position: absolute; inset: auto 0 -.9rem; margin: 0; color: var(--ink); font-size: .7rem; line-height: 1.4; text-align: right; }
+@media (max-width: 36rem) {
+  .home-current .home-hero-content { padding-top: 2.2rem; padding-bottom: 5rem; }
+  .home-current .home-personal-motion { margin-top: .3rem; }
+  .home-current .contact-email-address { font-size: 1.04rem; }
+}

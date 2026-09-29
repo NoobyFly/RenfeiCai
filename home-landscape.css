@@ -1,0 +1,237 @@
+/* Homepage scenery and project identities; portrait and text remain primary. */
+.home-current {
+  --canvas: #202926;
+  --bg: #25302c;
+  --ink: #e4e8e1;
+  --ink-strong: #f2f3ec;
+  --muted: #bbc7bf;
+  --subtle: #a1b2a7;
+  --accent: #bdd0bd;
+  --focus: #e3edce;
+  --line: #bccbbb33;
+  --line-strong: #bccbbb61;
+  --scenery-edge: #26332f;
+  --scenery-fade: clamp(2rem, 4vw, 3.5rem);
+}
+.home-current .home-hero {
+  --ink: #293934;
+  --ink-strong: #1d302b;
+  --muted: #53615a;
+  --accent: #52694f;
+  --focus: #263c2c;
+  min-height: clamp(35rem, 48vw, 42rem);
+  color: var(--ink);
+  background: #e4e7df;
+}
+.home-current .home-hero::before { display: none; }
+.home-current .home-hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: auto 0 0;
+  height: clamp(3.5rem, 5vw, 4.5rem);
+  background: linear-gradient(0deg, var(--scenery-edge), #26332f99 28%, #26332f00);
+  pointer-events: none;
+}
+.home-current .home-hero-content {
+  position: relative;
+  z-index: 2;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, .9fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  width: min(calc(100% - 6rem), 68rem);
+  padding-block: 3.2rem 6.5rem;
+}
+.home-current .home-hero .eyebrow,
+.home-current .home-hero .eyebrow span { color: #506458; }
+.home-current .home-hero h1 { color: #243930; }
+.home-current .home-identity { color: #4a5c50; }
+.home-current .home-lead { color: #304539; }
+.home-current .home-description { color: #59655a; }
+.home-current .home-hero-actions .primary-link,
+.home-current .home-hero-actions .secondary-link { color: #344e3d; }
+.home-current .home-hero-actions a:hover { color: #172e20; }
+.home-current .home-portrait {
+  align-self: center;
+  justify-self: end;
+  width: min(100%, 20rem);
+  margin: 0;
+  padding: .65rem;
+  border: 1px solid #74837259;
+  background: #e4e7df;
+  box-shadow: 0 16px 28px #1e33201f;
+}
+.home-current .home-portrait img { border: 0; border-radius: 0; box-shadow: none; }
+.home-current .home-hero-landscape {
+  position: absolute;
+  inset: 0 0 0 auto;
+  z-index: 0;
+  height: 100%;
+  width: 80%;
+  background: transparent;
+  pointer-events: none;
+}
+.home-current .home-hero-landscape img {
+  object-position: 65% 70%;
+  filter: saturate(.48) brightness(1.1);
+}
+.home-current .home-hero-landscape::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(90deg, #e4e7df 0%, #e4e7dff0 14%, #e4e7dfad 38%, #e4e7df30 76%), linear-gradient(180deg, #e4e7df 0%, #e4e7dfed 15%, #e4e7df9c 43%, #e4e7df10 85%);
+}
+.home-current .home-hero-foot {
+  z-index: 3;
+  width: min(calc(100% - 6rem), 68rem);
+  bottom: 1rem;
+  padding-top: .6rem;
+  border-color: #e7f0e453;
+  color: #f1f4ec;
+}
+.home-current .projects-section::before { background: var(--scenery-edge); }
+.home-current .projects-section { padding-bottom: 4rem; }
+.home-current .projects-scenery {
+  position:absolute; z-index:-1; inset-block:0; left:50%; width:100vw;
+  transform:translateX(-50%); pointer-events:none; overflow:hidden;
+  background-image:linear-gradient(90deg,#26332fec,#26332fcc 50%,#26332f88),url('assets/home/landscapes/projects-moss-canyon-v7.jpg');
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  filter:saturate(.5);
+  mask-image:linear-gradient(transparent,black var(--scenery-fade),black calc(100% - var(--scenery-fade)),transparent);
+}
+/* Each summary carries its own project hero, alongside the documentary photo. */
+.home-current .project-card .project-card-copy {
+  position:relative; isolation:isolate; overflow:hidden;
+  background:var(--project-surface);
+}
+.home-current .project-card-copy::before {
+  content:""; position:absolute; z-index:-1; inset:0; pointer-events:none;
+  background:var(--project-shade),var(--project-art) var(--project-position,center) / cover no-repeat;
+}
+.home-current .project-featured {
+  --project-surface:#28231b;
+  --project-art:url('assets/zhengda/archive-desk-web.webp');
+  --project-position:78% center;
+  --project-shade:linear-gradient(0deg,#28231bf5,transparent 75%),linear-gradient(90deg,#28231bf0,#28231bc2 50%,#28231b70);
+}
+.home-current .project-yunqiao {
+  --project-surface:#253025;
+  --project-art:url('assets/yunqiao/art/industry-engraving-web.webp');
+  --project-position:72% center;
+  --project-shade:linear-gradient(0deg,#253025e8,transparent 85%),linear-gradient(90deg,#253025eb,#253025aa 55%,#25302560);
+}
+.home-current .project-simulation {
+  --project-surface:#20364c;
+  --project-art:url('assets/simulation/market-layout-c2-v1-web.webp');
+  --project-position:84% center;
+  --project-shade:linear-gradient(0deg,#20364cf5,transparent 82%),linear-gradient(90deg,#20364ce8,#20364ca6 50%,#20364c60);
+}
+.home-current .project-research {
+  --project-surface:#202a2d;
+  --project-art:url('assets/home/research-mineral-v1-web.webp');
+  --project-position:82% center;
+  --project-shade:linear-gradient(0deg,#202a2df2,transparent 85%),linear-gradient(90deg,#202a2df5,#202a2db8 60%,#202a2d60);
+}
+.home-current .project-research .project-card-copy::before {
+  background-size:auto,auto,190% auto;
+  background-position:center,center,right 80%;
+}
+.home-current .home-landscape-transition,
+.home-current .home-landscape-closing {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  overflow: hidden;
+  pointer-events: none;
+  background: transparent;
+}
+.home-current .home-landscape-transition img,
+.home-current .home-landscape-closing img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-current .home-landscape-transition { top: 0; height: 100%; }
+.home-current .home-landscape-transition img { object-position: 50% 78%; filter: saturate(.5); }
+.home-current .home-landscape-transition::after,
+.home-current .home-landscape-closing::after { content: ""; position: absolute; inset: 0; }
+.home-current .home-landscape-transition::after {
+  background:linear-gradient(180deg,var(--scenery-edge),transparent var(--scenery-fade),transparent calc(100% - var(--scenery-fade)),var(--scenery-edge)),linear-gradient(90deg,#2b3b32eb,#2b3b32dc 48%,#2b3b32d9);
+}
+.home-current #experience,
+.home-current .education-section {
+  --ink:#e0e3d9; --ink-strong:#f1f2e9; --muted:#c4cabe; --subtle:#bdc5b8;
+  --accent:#d2ceb2; --focus:#f1ecc8; --line:#d1d4bd36; --line-strong:#d1d4bd65;
+  color: var(--ink);
+}
+.home-current #experience { border-top:1px solid #c7cfb754; padding-top:clamp(3.5rem,6vw,5.5rem); }
+.home-current #experience::before { background:var(--scenery-edge); }
+.home-current .education-section { --subtle:#e0e3d9; padding-block:4.5rem 6rem; }
+.home-current .education-section::before {
+  background:linear-gradient(180deg,var(--scenery-edge),transparent var(--scenery-fade),transparent calc(100% - var(--scenery-fade)),var(--scenery-edge)),linear-gradient(90deg,#33433cef,#33433cbf 50%,#33433cc2),url('assets/home/landscapes/education-misty-lake-v8.jpg') center 64% / cover no-repeat,var(--scenery-edge);
+}
+.home-current .beyond-section::before {
+  background:linear-gradient(180deg,var(--scenery-edge),transparent var(--scenery-fade),transparent calc(100% - var(--scenery-fade)),var(--scenery-edge)),linear-gradient(90deg,#27332eeb,#27332ead 48%,#27332e50),url('assets/atmosphere-v4/home-forest-web.webp') center / cover no-repeat,var(--scenery-edge);
+}
+.home-current .beyond-section { --accent: #b9c7ad; --line: #c6d0b733; }
+.home-current .hobby-grid { padding-inline: 0; background: transparent; }
+.home-current .hobby-symbol { color: #a7b99e; }
+.home-current .contact-section { --accent: #c1cbb6; position: relative; isolation: isolate; }
+.home-current .home-landscape-closing { top: 0; bottom: -2rem; height: auto; }
+.home-current .home-landscape-closing img { object-position: 50% 55%; filter: saturate(.45); }
+.home-current .home-landscape-closing::after {
+  background:linear-gradient(180deg,var(--scenery-edge),transparent var(--scenery-fade),#202926),linear-gradient(90deg,#202926ed,#202926b0 48%,#20292665 85%);
+}
+.home-current .site-footer { flex-wrap: wrap; gap: 1rem 2rem; }
+.home-current #contact { grid-template-columns:auto minmax(0,1fr); align-items:center; gap:2rem; padding-block:3.5rem; }
+.home-current #contact h2 { margin:0; }
+.home-current #contact .contact-email { justify-self:end; }
+.home-current #contact .contact-email-address { margin:0; }
+.home-current #beyond .cycling-photo-button img { object-position:50% 78%; }
+.home-current .hobby-player-stage { aspect-ratio:3/2; background:#12221d; }
+.home-current .hobby-player-stage video { height:100%; object-fit:contain; }
+.home-current .hobby-player-stage [hidden] { display:none !important; }
+.home-current .hobby-player-modes { display:flex; flex-wrap:wrap; gap:.3rem; }
+.home-current .hobby-player-modes button { min-height:2.6rem; padding:.5rem .65rem; border:1px solid #bac8b54d; background:transparent; color:#c9d3c0; font:inherit; font-size:.8rem; cursor:pointer; }
+.home-current .hobby-player-modes button[aria-pressed=true] { background:#c1d0b8; color:#20312a; border-color:#c1d0b8; }
+.home-current .hobby-player-modes [hidden] { display:none; }
+.home-current .hobby-player-modes button:focus-visible { outline:2px solid var(--focus); outline-offset:3px; }
+.home-current .hobby-inline-player .hobby-heading { flex-wrap:wrap; }
+.home-current .hobby-inline-player h3 { font-family:var(--serif); font-weight:400; }
+@media (max-width: 62rem) {
+  .home-current .home-hero-content,
+  .home-current .home-hero-foot { width: min(calc(100% - 4rem), 68rem); }
+  .home-current .home-portrait { width: min(100%, 18rem); }
+}
+@media (max-width: 48rem) {
+  .home-current .home-hero-content { gap: 2rem; padding-block: 2.8rem 5.8rem; }
+  .home-current .home-portrait { margin: 0; padding: .45rem; }
+  .home-current .projects-section { padding-bottom: 3rem; }
+  .home-current .education-section { padding-block:3rem 4rem; }
+  .home-current .beyond-section::before { background-size:auto,auto,auto 100%; }
+}
+@media (max-width: 36rem) {
+  .home-current #contact { grid-template-columns:1fr; gap:1rem; padding-block:2.5rem; }
+  .home-current #contact .contact-email { justify-self:start; }
+  .home-current .home-hero { min-height: 0; }
+  .home-current .home-hero-content {
+    width: calc(100% - 2.5rem);
+    grid-template-columns: minmax(0, 1fr) 7.5rem;
+    gap: 0 1.2rem;
+    padding-block: 2.2rem 5.5rem;
+  }
+  .home-current .home-portrait { align-self: center; margin: 0; width: 100%; padding: .3rem; }
+  .home-current .home-hero-foot { width: calc(100% - 2.5rem); bottom: .85rem; }
+  .home-current .home-hero-landscape { width: 100%; opacity: .6; }
+  .home-current .home-hero-landscape img { object-position: 65% 58%; }
+  .home-current .home-hero-landscape::after { background: linear-gradient(90deg, #e4e7dfeb, #e4e7dfa8 70%, #e4e7df60), linear-gradient(180deg, #e4e7df 5%, #e4e7dfaa 50%, transparent); }
+  .home-current .home-landscape-transition img { object-position:65% center; }
+  .home-current .education-section::before { background-position:center,center,60% center; }
+}
+@media (max-width: 23rem) {
+  .home-current .home-hero-content { grid-template-columns: minmax(0, 1fr) 6.25rem; gap: 0 .9rem; }
+}

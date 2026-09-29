@@ -1,0 +1,50 @@
+/* Competitor analysis uses layered paper; the hero retains its market model. */
+.sim-strategy-section { overflow: hidden; background-image: none; }
+.sim-strategy-section::before {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transform: none;
+  background:linear-gradient(180deg,#d7dbcd,transparent 3rem,#d7dbcd 38rem),linear-gradient(90deg,#d7dbcdf7,#d7dbcdd9 45%,#d7dbcd96),url('assets/simulation/opponent-analysis-paper-v2-web.webp') right top / auto 40rem no-repeat;
+}
+.sim-field-section { isolation: isolate; background: #252a20; }
+.sim-field-section::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, #252a20f7 0%, #252a20ec 48%, #252a20c4), linear-gradient(180deg, #252a20, transparent 4rem, #252a20), url('assets/simulation/ledger-s3-v1-web.webp') right 75% / 150% auto no-repeat;
+}
+.sim-field-trace { display: none; }
+.sim-field-copy { background: linear-gradient(90deg, #252a20b8, #252a2077); padding: 1.3rem 1.4rem; border-left: 1px solid #b9bd9733; }
+.sim-field-photo { background: #323a2de8; }
+@media (max-width: 768px) {
+  .sim-strategy-section::before { background-size: auto, auto, auto 48rem; background-position: center, center, 75% top; }
+  .sim-field-copy { padding: 1rem 0 0; background: none; border: 0; }
+  .sim-field-section::before { opacity: .6; background-size: auto, auto, auto 45rem; }
+}
+
+/* C2 market layout selected by the user, 2026-09-28. */
+.sim-page { --canvas: #1c2f42; }
+.sim-page .sim-hero { background: #20364c; }
+.sim-page .sim-hero-art { inset: 0; }
+.sim-page .sim-hero-art img { object-position: 58% center; }
+.sim-page .sim-hero-art::after {
+  background: linear-gradient(90deg, #20364cf2 0%, #20364cd9 25%, #20364c8c 43%, #20364c15 70%, transparent), linear-gradient(0deg, #20364ced 0%, #20364c60 18%, transparent 40%);
+}
+.sim-page .sim-hero-intro { color: #d0d2c6; }
+@media (max-width: 48rem) {
+  .sim-page .sim-hero-art { opacity: 1; }
+  .sim-page .sim-hero-art img { object-position: 68% center; }
+  .sim-page .sim-hero-art::after {
+    background: linear-gradient(90deg, #20364cf0, #20364cb8 52%, #20364c80), linear-gradient(0deg, #20364cf5 0%, #20364c90 23%, transparent 65%);
+  }
+}
+@media (max-width: 36rem) {
+  .sim-page .sim-hero-art img { object-position: 68% 40%; }
+  .sim-page .sim-hero-art::after {
+    background: linear-gradient(90deg, #20364cfa, #20364cdb 42%, #20364cbd), linear-gradient(0deg, #20364cf0, transparent);
+  }
+}

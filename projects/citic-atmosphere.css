@@ -1,0 +1,29 @@
+/* Selected C3 / C7 / C8 / C4, integrated behind reading surfaces. */
+.cr-macro-band::before {
+  bottom: auto;
+  height: min(100%, 47rem);
+  background: linear-gradient(90deg, #1c2b31 12%, #1c2b31e8 38%, #1c2b3160 83%), linear-gradient(180deg, #1c2b3140 0%, #1c2b3140 52%, #1c2b31 98%), url('../assets/citic/strata-c3-v1-web.webp') right top / cover no-repeat;
+}
+.cr3-map, .cr3-assets {
+  background-image: linear-gradient(90deg, #edf0e8f0, #edf0e8c7), url('../assets/citic/paper-c7-v1-web.webp');
+  background-size: cover;
+  background-position: center, right center;
+}
+.cr3-assets { background-image: linear-gradient(90deg, #e6e9e4ed, #e6e9e4d9), url('../assets/citic/paper-c7-v1-web.webp'); }
+.cr-product-band::before { background: radial-gradient(ellipse at 85% 40%, #71533b23, transparent 66%); }
+.cr3-pitch { background: linear-gradient(90deg, #eee5d4f5, #eee5d4d6), url('../assets/citic/paper-c7-v1-web.webp') right center / cover; }
+.cr-copper-band::before {
+  background: linear-gradient(90deg, #132b35 9%, #132b35e8 44%, #132b3552 96%), linear-gradient(180deg, #132b35 0%, #132b354a 30%, #132b35 93%), url('../assets/citic/minerals-c8-v1.png') right center / min(100%, 78rem) auto no-repeat;
+}
+.cr-continuation { isolation: isolate; overflow: hidden; }
+.cr-continuation::before {
+  z-index: -1;
+  opacity: 1;
+  background: linear-gradient(90deg, #1b282e 16%, #1b282ef0 48%, #1b282e70 100%), linear-gradient(180deg, #1b282e 0%, #1b282e3d 60%, #1b282e 100%), url('../assets/citic/research-desk-c4-v1-web.webp') right center / min(90%, 63rem) auto no-repeat;
+}
+@media (max-width: 640px) {
+  .cr-macro-band::before { height: 34rem; opacity: .65; background-position: center, center, 72% top; }
+  .cr3-map, .cr3-assets, .cr3-pitch { background-size: auto, auto 100%; }
+  .cr-copper-band::before { opacity: .45; background-size: auto, auto, auto 30rem; background-position: center, center, 68% center; }
+  .cr-continuation::before { opacity: .5; background-size: auto, auto, auto 100%; background-position: center, center, 65% center; }
+}

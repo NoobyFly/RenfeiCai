@@ -1,0 +1,71 @@
+/* One chapter navigation layout, with each project's existing palette. */
+:root { --project-navigation-height: 3.5rem; }
+html:has(body :is([data-project-nav])) { scroll-padding-top: calc(var(--site-navigation-height) + 1rem); }
+.zd-page { --project-nav-bg: #e6d8c2; --project-nav-ink: #66513e; --project-nav-active: #3f3123; --project-nav-rule: #76624c35; }
+.yunqiao-page { --project-nav-bg: #1e2c21; --project-nav-ink: #bac4b0; --project-nav-active: #edf0d5; --project-nav-rule: #9dab8140; }
+.sim-page { --project-nav-bg: #e8e3d7; --project-nav-ink: #5a655f; --project-nav-active: #20364c; --project-nav-rule: #66776b40; }
+.citic-page { --project-nav-bg: #15252c; --project-nav-ink: #b5c4c7; --project-nav-active: #ecc7a3; --project-nav-rule: #a4b8b733; }
+body .project-toc.project-toc {
+  position: sticky;
+  top: calc(var(--site-navigation-height) + 1px);
+  z-index: 11;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid var(--project-nav-rule);
+  color: var(--project-nav-ink);
+  background: var(--project-nav-bg);
+  box-shadow: 0 4px 12px #101b1612;
+}
+body .project-toc .project-toc-inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(.75rem, 2.7vw, 2.7rem);
+  min-height: var(--project-navigation-height);
+  padding-block: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+.project-toc-label { flex: 0 0 auto; margin-right: auto; font-size: .7rem; }
+body .project-toc .project-toc-inner a {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  position: static;
+  min-width: 0;
+  min-height: var(--project-navigation-height);
+  padding: .7rem .15rem;
+  margin: 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  box-shadow: none;
+  color: inherit;
+  background: none;
+  font: 400 .82rem/1.4 var(--sans);
+  text-decoration: none;
+  white-space: nowrap;
+}
+body .project-toc a::before { content: none; }
+body .project-toc .project-toc-inner a:hover,
+body .project-toc .project-toc-inner a[aria-current] {
+  color: var(--project-nav-active);
+  border-bottom-color: currentColor;
+}
+.project-toc a:focus-visible { outline: 2px solid var(--project-nav-active); outline-offset: -4px; }
+:is(.zd-page,.yunqiao-page,.sim-page,.citic-page) main [id] {
+  scroll-margin-top: calc(var(--project-navigation-height) + .75rem);
+}
+@media (max-width: 48rem) {
+  :root { --project-navigation-height: 3.1rem; }
+  .project-toc-label { display: none; }
+  body .project-toc .project-toc-inner { width: calc(100% - 2rem); justify-content: space-between; gap: .65rem; }
+  body .project-toc .project-toc-inner a { font-size: .74rem; padding-inline: 0; }
+}
+@media (max-width: 24rem) {
+  body .project-toc .project-toc-inner { width: calc(100% - 1.5rem); gap: .5rem; }
+  body.yunqiao-page .project-toc .project-toc-inner { gap: .12rem; }
+  body .project-toc .project-toc-inner a { font-size: .7rem; }
+}

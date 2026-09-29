@@ -1,0 +1,103 @@
+/* Final review: shared spacing, chapter transitions and original material viewers. */
+.home-current :is(#experience,.education-section) :is(h2,h3,dt,dd,strong) { color:var(--ink-strong); }
+.home-current :is(#experience,.education-section) p { color:var(--muted); }
+.home-current #experience .item-role { color:var(--accent); }
+.home-current .hobby-grid article { padding-bottom:1.2rem; }
+.home-current .hobby-grid article>h3 { margin-bottom:.4rem; }
+.home-current .cycling-photo-button img { object-position:50% 53%; }
+.home-current .hobby-heading { display:flex; justify-content:space-between; align-items:end; gap:1rem; padding:1.35rem 1.35rem .25rem; }
+.home-current .hobby-heading .item-meta { margin:0; }
+.home-current .hobby-heading h3 { margin:.55rem 0 0; }
+.home-current .hobby-maintenance-link { color:#d8ddca; font:inherit; font-size:.78rem; padding:.6rem 0; border:0; border-bottom:1px solid #a8b6a45b; background:transparent; cursor:pointer; white-space:nowrap; }
+.home-current .hobby-photo-button:focus-visible,.home-current .hobby-maintenance-link:focus-visible { outline:2px solid var(--focus); outline-offset:4px; }
+.home-hobby-dialog { padding:1rem 1.2rem; }
+.home-hobby-dialog [hidden] { display:none !important; }
+.home-hobby-dialog figure { margin:0; }
+.home-hobby-dialog figcaption { text-align:center; padding:.6rem 0 0; font-size:.78rem; color:#c5cebd; }
+.home-hobby-dialog .hobby-full-image { height:min(63dvh,43rem); }
+.home-hobby-dialog .hobby-full-video { display:block; width:100%; height:min(65dvh,43rem); object-fit:contain; background:#111915; }
+.home-hobby-dialog .hobby-photo-choices { flex-wrap:wrap; }
+.home-hobby-dialog .hobby-photo-choices:empty { display:none; }
+.ride-record { min-height:min(60dvh,32rem); padding:clamp(2rem,6vw,5rem); display:flex; flex-direction:column; justify-content:center; background:radial-gradient(ellipse at 90% 20%,#66715555,transparent 65%),repeating-linear-gradient(0deg,transparent 0 47px,#a5b09012 47px 48px),#24372e; }
+.ride-record-label { font-size:.85rem; color:#c5d1b9; }
+.ride-record h3 { margin:.3rem 0 2rem; font:400 clamp(3.7rem,9vw,7rem)/1.2 var(--sans); letter-spacing:-.05em; color:#f0f2e5; }
+.ride-record h3 span { font-size:.26em; letter-spacing:0; }
+.ride-record dl { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.5rem; padding-block:1.4rem; margin:0; border-block:1px solid #a8b6a44d; }
+.ride-record dt { color:#bbc7b4; font-size:.76rem; }
+.ride-record dd { margin:.5rem 0 0; font-size:clamp(1.2rem,2.3vw,2rem); white-space:nowrap; }
+.ride-record small { font-size:.55em; }
+.ride-record-caption { margin:1.3rem 0 0; font-size:.72rem; color:#aebca5; }
+
+/* The Yunqiao reading column now shares the site's full content width. */
+.yunqiao-page .yq-layout { display:block; padding-top:2.4rem; }
+.yunqiao-page .yq-toc { position:static; display:flex; align-items:center; gap:2rem; width:100%; padding-block:1rem; margin:0 0 4rem; border-block:1px solid var(--line); }
+.yunqiao-page .yq-toc p { flex:none; margin:0; font-size:.72rem; }
+.yunqiao-page .yq-toc ol { display:flex; flex:1; flex-wrap:wrap; justify-content:space-between; gap:.5rem 1.2rem; padding:0; margin:0; }
+.yunqiao-page .yq-toc li { margin:0; padding:0; border:0; }
+.yunqiao-page .yq-toc li:last-child { grid-column:auto; }
+.yunqiao-page .yq-toc a { padding:.55rem .3rem; font-size:.83rem; }
+.yunqiao-page .yq-content { width:100%; min-width:0; }
+.yunqiao-page .yq-closing { padding:2rem 0 6rem; margin-bottom:0; }
+.yunqiao-page .yq-closing::after { inset-inline:0; }
+.yunqiao-page .yq-section-heading>p { max-width:48rem; }
+.yunqiao-page .yq-section-heading h2 { text-wrap:balance; }
+
+/* Material continuity: a full paper field, then thin copper traces. */
+.citic-page .cr-macro-band::before {
+  height:auto; inset:0;
+  background:linear-gradient(180deg,#1c2b31,transparent 4rem,transparent calc(100% - 4rem),#1c2b31),linear-gradient(110deg,#263431f2,#263431df 57%,#263431d4),url('assets/citic/paper-c7-v1-web.webp') center top / 100% auto repeat-y;
+  opacity:1;
+}
+.citic-page .cr-copper-band::before {
+  height:auto; inset:0; opacity:1;
+  background:linear-gradient(180deg,#1c2b31,#132b3500 12rem,#132b35 90%),linear-gradient(90deg,#132b35ee 15%,#132b3588 70%,#132b3566),url('assets/citic/copper-traces-v5.svg') right top / auto 55rem no-repeat;
+}
+.citic-page .cr-copper-band::after { content:none; }
+.source-original-link { display:inline-block; margin-top:1.4rem; padding:.45rem 0; border-bottom:1px solid currentColor; font-size:.82rem; text-decoration:none; text-underline-offset:.4em; }
+.cr3-map>.source-original-link,.cr3-assets>.source-original-link { color:#3b5547; margin-left:0; }
+.source-original-link span { margin-left:.7rem; }
+.original-dialog { width:min(94vw,82rem); max-height:94dvh; padding:1.2rem; color:#e9ede2; background:#1e2c28; border:1px solid #93a08d80; }
+.original-dialog::backdrop { background:#0a1715df; backdrop-filter:blur(4px); }
+.original-dialog header { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1rem; }
+.original-dialog header p { margin:0 0 .35rem; font-size:.68rem; color:#b7c0ad; }
+.original-dialog h2 { font:400 clamp(1.1rem,2vw,1.6rem)/1.5 var(--serif); margin:0; }
+.original-dialog button { min-height:2.75rem; padding:.6rem .9rem; border:1px solid #acb49b66; color:inherit; background:#2e4237; cursor:pointer; font:inherit; font-size:.78rem; }
+.original-dialog button:focus-visible,.original-viewport:focus-visible { outline:2px solid #d5deb5; outline-offset:3px; }
+.original-dialog button[aria-pressed=true] { background:#596751; color:#fff7df; }
+.original-toolbar { display:flex; align-items:center; gap:.7rem; padding-bottom:.8rem; flex-wrap:wrap; }
+.original-toolbar span { font-size:.71rem; color:#b8c4b3; margin-left:auto; }
+.original-viewport { display:flex; justify-content:center; align-items:center; height:68dvh; overflow:auto; overscroll-behavior:contain; background:#e9eae4; touch-action:pan-x pan-y; }
+.original-viewport img { display:block; max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; user-select:none; -webkit-user-drag:none; }
+.original-viewport.is-zoomed { display:block; cursor:grab; }
+.original-viewport.is-zoomed img { max-width:none; max-height:none; }
+.original-viewport.is-dragging { cursor:grabbing; }
+
+/* Give the finding and persona panels room without changing their content. */
+.zd-page .zd-finding-spread { gap:clamp(2rem,4vw,4.5rem); padding:clamp(2rem,4vw,3.8rem); border:1px solid #b7a88b66; background:#f6efe1a6; margin-top:3rem; }
+.zd-page .zd-finding-text { max-width:32rem; }
+.zd-page .zd-finding-text>p:not(.zd-small-label) { line-height:1.95; text-wrap:pretty; }
+.zd-page .zd-finding-text .zd-text-button { margin-top:.7rem; }
+.zd-page .zd-persona-panel { padding:2.8rem 3rem; gap:3.5rem; }
+@media (max-width:800px) {
+  .yunqiao-page .yq-toc { display:block; margin-bottom:2.5rem; }
+  .yunqiao-page .yq-toc p { margin-bottom:.7rem; }
+  .yunqiao-page .yq-toc ol { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.3rem; }
+  .citic-page .cr-macro-band::before { background-size:auto,auto,auto 55rem; }
+  .zd-page .zd-persona-panel { padding:2.4rem 1.5rem 1.5rem; gap:1.5rem; }
+  .zd-page .zd-finding-spread { padding:1.6rem; gap:2rem; }
+}
+@media (max-width:480px) {
+  .home-hobby-dialog { width:94vw; padding:.8rem; }
+  .home-hobby-dialog .hobby-full-image { height:57dvh; }
+  .hobby-photo-choices button { padding:.6rem .7rem; }
+  .ride-record { padding:2rem 1.2rem; }
+  .ride-record dl { grid-template-columns:1fr; gap:1rem; }
+  .ride-record dl>div { display:flex; align-items:baseline; justify-content:space-between; gap:1rem; }
+  .ride-record dd { margin:0; font-size:1.25rem; }
+  .original-dialog { padding:.8rem; }
+  .original-toolbar { gap:.5rem; }
+  .original-toolbar span { width:100%; margin:0; }
+  .original-viewport { height:62dvh; }
+  .zd-page .zd-finding-spread { padding:1.3rem; }
+  .yunqiao-page .yq-toc a { font-size:.76rem; }
+}

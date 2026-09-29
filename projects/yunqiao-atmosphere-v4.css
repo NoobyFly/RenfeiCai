@@ -1,0 +1,29 @@
+/* Yunqiao: geography and local circulation; leave working diagrams clean. */
+.yunqiao-page .yq-context,.yunqiao-page .yq-fieldwork,.yunqiao-page .yq-judgment,.yunqiao-page .yq-collaboration { position:relative; isolation:isolate; }
+.yunqiao-page .yq-context::before { content:""; position:absolute; inset:0 -3vw auto; height:26rem; z-index:-1; pointer-events:none; background:linear-gradient(90deg,#171c18 20%,#171c18d4 60%,#171c1870),url('../assets/yunqiao/art/transport-engraving-web.webp') right top/auto 26rem no-repeat; mask-image:linear-gradient(transparent,black 12%,black 50%,transparent); }
+.yunqiao-page .yq-fieldwork::before { content:none; }
+.yunqiao-page .yq-field-transition { height:1px; margin:3rem 0 0; background:#81907133; }
+.yunqiao-page .yq-field-transition::before { content:none; }
+.yunqiao-page .yq-judgment::before { content:""; position:absolute; inset:0 -3vw auto; height:30rem; z-index:-1; pointer-events:none; background:linear-gradient(90deg,#171c18 20%,#171c18dd 60%,#171c1877),url('../assets/yunqiao/art/market-engraving-web.webp') right top/auto 30rem no-repeat; mask-image:linear-gradient(transparent,black 12%,black 60%,transparent); }
+.yunqiao-page .yq-collaboration::before { content:""; position:absolute; inset:0 -3vw; z-index:-1; pointer-events:none; background:repeating-linear-gradient(90deg,transparent 0 79px,#a4b4840c 79px 80px),repeating-linear-gradient(0deg,transparent 0 79px,#a4b48409 79px 80px); mask-image:linear-gradient(transparent,black 6rem,black 85%,transparent); }
+.yunqiao-page .yq-context .yq-flow-figure,.yunqiao-page .yq-network-motion { background:#1c251e; }
+.yunqiao-page .yq-stage-flow > article { background:#222a20; }
+.yunqiao-page .yq-closing::after { content:none; }
+
+@media(max-width:48rem) {
+  .yunqiao-page .yq-context::before,.yunqiao-page .yq-judgment::before { opacity:.7; }
+  .yunqiao-page .yq-feishu-tools { padding:.9rem; }
+  .yunqiao-page .yq-feishu-heading { display:flex; align-items:center; gap:1rem; padding-bottom:.75rem; }
+  .yunqiao-page .yq-feishu-heading > p { margin:0; max-width:10rem; font-size:.72rem; text-align:right; text-wrap:balance; }
+  .yunqiao-page .yq-feishu-identity { gap:.55rem; }
+  .yunqiao-page .yq-feishu-identity img { width:2rem; height:2rem; }
+  .yunqiao-page .yq-feishu-list { grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem; margin-top:.75rem; }
+  .yunqiao-page .yq-feishu-list li { grid-template-columns:1.2rem minmax(0,1fr); gap:.45rem; align-items:start; padding:.65rem .5rem; }
+  .yunqiao-page .yq-feishu-list svg { width:1.2rem; height:1.2rem; }
+  .yunqiao-page .yq-feishu-list li > span { display:contents; }
+  .yunqiao-page .yq-feishu-list strong { font-size:.75rem; line-height:1.55; }
+  .yunqiao-page .yq-feishu-list small { grid-column:1/-1; font-size:.75rem; line-height:1.6; text-wrap:balance; }
+  .yunqiao-page .yq-feishu-bridge { margin-top:.7rem; font-size:.75rem; }
+  .yunqiao-page .yq-team-map { margin-top:1.5rem; }
+}
+

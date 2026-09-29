@@ -1,0 +1,122 @@
+/* V4: chapter-specific imagery with solid, readable foreground surfaces. */
+.zd-document,.sim-page { overflow-x:clip; }
+.home-current .beyond-section::before {
+  background: linear-gradient(180deg,#27332e10,#27332e36 62%,#27332e),linear-gradient(90deg,#27332ee8,#27332e92 48%,#27332e22),url('assets/atmosphere-v4/home-forest-web.webp') center / cover no-repeat,#27332e;
+}
+.home-current .projects-section>.section-heading,.home-current .beyond-section>.section-heading { position:relative; }
+.home-current .hobby-grid { gap:1.4rem; padding:0; border:0; align-items:stretch; }
+.home-current .hobby-grid article,.home-current .hobby-grid article:first-child,.home-current .hobby-grid article:last-child {
+  display:block; padding:0 0 1.4rem; border:1px solid #a8b6a43b; background:#23322ff5; overflow:hidden;
+}
+.home-current .hobby-grid article>.item-meta,.home-current .hobby-grid article>h3,.home-current .hobby-grid article>p:last-child { margin-left:1.35rem; margin-right:1.35rem; }
+.home-current .hobby-grid article>.item-meta { margin-top:1.35rem; }
+.home-current .hobby-grid article>h3 { font-family:var(--serif); font-weight:400; }
+.home-current .hobby-media { width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; display:block; border:0; background:#12221d; }
+.home-current .hobby-photo-button { position:relative; width:100%; padding:0; border:0; cursor:zoom-in; display:block; }
+.home-current .hobby-photo-button img { object-position:58% center; }
+.home-current .hobby-photo-button>span { position:absolute; right:.75rem; bottom:.7rem; padding:.4rem .7rem; color:#f1f2e8; background:#1a2926d9; font-size:.7rem; border:1px solid #ddd8ba55; }
+.home-hobby-dialog { width:min(92vw,70rem); max-height:92dvh; padding:1rem; background:#192620; color:#eef1e8; border:1px solid #a5b19870; }
+.home-hobby-dialog::backdrop { background:#0d1513dc; backdrop-filter:blur(4px); }
+.home-hobby-dialog header { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:0 .3rem .8rem; }
+.home-hobby-dialog h2 { font:400 1.3rem/1.4 var(--serif); margin:0; }
+.home-hobby-dialog button { color:inherit; background:#253a31; border:1px solid #99a69670; cursor:pointer; padding:.6rem .9rem; }
+.home-hobby-dialog .hobby-full-image { display:block; width:100%; height:min(65dvh,43rem); object-fit:contain; }
+.hobby-photo-choices { display:flex; justify-content:center; gap:.75rem; padding-top:.8rem; }
+.hobby-photo-choices button[aria-pressed=true] { border-color:#e9d8b4; background:#405244; }
+
+/* CITIC: material changes follow the research sequence, not category names. */
+.citic-page .cr-macro-band::before {
+  height:44rem; background:linear-gradient(130deg,#263431 4%,#273734ac 55%,#1c2b31 98%),url('assets/citic/paper-c7-v1-web.webp') center / cover; opacity:.85;
+}
+.citic-page .cr-copper-band::before {
+  background:linear-gradient(180deg,#132b3500,#132b35 44rem),linear-gradient(90deg,#132b35ef 15%,#132b35b8 50%,#132b3533),url('assets/citic/strata-c3-v1-web.webp') right top / auto 45rem no-repeat;
+}
+.citic-page .cr-copper-band::after { content:""; position:absolute; z-index:-1; pointer-events:none; width:40%; height:30rem; right:0; bottom:0; opacity:.12; background:url('assets/citic/minerals-c8-v1.png') right bottom / cover; mask-image:linear-gradient(120deg,transparent,black); }
+.citic-page .cr4-allocation::before {
+  background:linear-gradient(180deg,#302a25,transparent 4rem,transparent calc(100% - 4rem),#302a25),linear-gradient(90deg,#302a25f7,#302a25e8),url('assets/citic/paper-c7-v1-web.webp') right top / 80rem auto;
+}
+.cr4-research-map { display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr); align-items:start; gap:1.25rem; padding:2.2rem; border-block:1px solid #b59c774f; background:#282722ed; }
+.cr4-research-map>div { min-width:0; }
+.cr4-research-map span { color:#b8a381; font-size:.76rem; letter-spacing:.07em; }
+.cr4-research-map strong { display:block; margin:.7rem 0; color:#f0eadc; font:400 clamp(1.2rem,1.7vw,1.6rem)/1.5 var(--serif); text-wrap:balance; }
+.cr4-research-map p { margin:0; color:#c5c5b8; font-size:.9rem; line-height:1.9; text-wrap:pretty; }
+.cr4-research-map>i { align-self:center; color:#bc9b72; font-style:normal; }
+.cr4-comparison { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.7fr); gap:3rem; margin-top:3.5rem; }
+.cr4-comparison-intro h3 { font:400 clamp(1.65rem,2.5vw,2.2rem)/1.5 var(--serif); margin:.8rem 0 1.2rem; }
+.cr4-comparison-intro>p:last-child { color:#ccc5b9; font-size:.94rem; line-height:1.95; max-width:24rem; }
+.cr4-comparison-rows { padding:0 1.8rem; background:linear-gradient(90deg,#ece7dbf8,#ece7dbe8),url('assets/citic/paper-c7-v1-web.webp') center/cover; color:#343c35; border:1px solid #c9baa0; }
+.cr4-comparison-rows article { padding:1.65rem 0; border-bottom:1px solid #a3967d55; }
+.cr4-comparison-rows article:last-child { border-bottom:0; }
+.cr4-comparison-rows h4 { margin:0 0 .7rem; color:#354039; font:500 1.12rem/1.6 var(--sans); }
+.cr4-comparison-rows p { margin:.5rem 0 0; font-size:.91rem; line-height:1.95; text-wrap:pretty; }
+.cr4-observation { padding-left:.9rem; border-left:2px solid #9f7d50; }
+.cr4-observation span { display:block; color:#846c4b; font-size:.72rem; letter-spacing:.08em; }
+.cr4-section-bridge { display:flex; flex-wrap:wrap; gap:.7rem 2rem; align-items:center; justify-content:space-between; margin:2rem 0 0; font-size:.87rem; line-height:1.9; color:#ccc6b8; }
+.cr4-section-bridge a { color:#e5c28f; white-space:nowrap; text-underline-offset:.4em; }
+.citic-page .cr4-roadshow { background:#c9c5b6; color:#303b34; --muted:#576052; --ink-strong:#27392e; --accent:#786141; }
+.citic-page .cr4-roadshow::before { background:linear-gradient(110deg,#d6d2c0,#dcd7c8); }
+.citic-page .cr4-roadshow .cr-section-heading>p { color:#485549; }
+.citic-page .cr4-roadshow .cr-eyebrow { color:#5d4a30; }
+.cr4-pitch { margin:0; padding:2.5rem; color:#2c3d33; background:#ece6d7e8; border:1px solid #ab9e86; box-shadow:0 10px 30px #343c2d0d; }
+.cr4-pitch figcaption h3 { font:400 clamp(1.6rem,2.7vw,2.3rem)/1.5 var(--serif); margin:.5rem 0 1.7rem; }
+.cr4-pitch ol { list-style:none; padding:0; margin:0; }
+.cr4-pitch li { display:grid; grid-template-columns:10rem minmax(0,1fr); gap:2rem; border-top:1px solid #ad9e8055; padding:1.5rem 0; }
+.cr4-pitch-topic { color:#6b5336; font-size:.81rem; padding-top:.25rem; }
+.cr4-pitch h4 { margin:0; font:500 1.15rem/1.7 var(--sans); color:#304439; text-wrap:balance; }
+.cr4-pitch li p { font-size:.93rem; margin:.6rem 0 0; line-height:1.9; color:#536153; }
+.cr4-pitch-close { display:flex; align-items:center; flex-wrap:wrap; gap:.8rem 2rem; border-top:1px solid #ad9e8055; padding-top:1.3rem; }
+.cr4-pitch-close>span { font-size:.76rem; color:#66543b; }
+.cr4-pitch-close p { margin:0; font-size:.85rem; line-height:1.9; }
+.cr4-pitch-close b { font-weight:400; margin-inline:.75rem; color:#9d805c; }
+.citic-page .cr-continuation::before { inset:0 0 0 38%; opacity:1; background:linear-gradient(90deg,#1b282e,#1b282ecc 50%,#1b282e8c),linear-gradient(180deg,#1b282e,transparent 30%,#1b282e),url('assets/citic/research-desk-c4-v1-web.webp') right 65% / auto 38rem no-repeat; }
+
+/* Zhengda: paper, window light and the documentary material remain distinct. */
+.zd-page .zd-section { position:relative; isolation:isolate; }
+.zd-page #learners::before,.zd-page #process::before,.zd-page #contribution::before,.zd-page #result::before { content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; border:0; width:auto; height:auto; transform:none; }
+.zd-page #learners::before { background:#f0e8d8; }
+.zd-page #process::before { background:linear-gradient(180deg,#f0e8d8,transparent 3rem,transparent 20rem,#f0e8d8 35rem),linear-gradient(90deg,#f0e8d8 28%,#f0e8d8ed 56%,#f0e8d8ab),url('assets/atmosphere-v4/zhengda-paper-web.webp') right top / auto 35rem no-repeat; }
+.zd-page #contribution::before { background:linear-gradient(90deg,#ece5d8e6,#ece5d8b0),repeating-linear-gradient(0deg,transparent 0 47px,#959c8622 47px 48px),repeating-linear-gradient(90deg,transparent 0 47px,#959c8622 47px 48px),#ece5d8; }
+.zd-page #result::before { background:#ede5d8; }
+.zd-page .zd-method-board,.zd-page .zd-source-exhibit { position:relative; }
+
+/* Simulation: factory setting, strategic paths, and work desk have separate roles. */
+.sim-page #business { position:relative; isolation:isolate; }
+.sim-page #business::before { content:""; position:absolute; inset:0 calc((100% - 100vw)/2); pointer-events:none; z-index:-1; background:linear-gradient(180deg,#e4ddce00,#e4ddce 31rem),linear-gradient(90deg,#e4ddce 25%,#e4ddcec9 65%,#e4ddce91),url('assets/atmosphere-v4/simulation-yard-web.webp') right top / auto 32rem no-repeat; }
+.sim-page .sim-results-section { background:#e5ddce; }
+
+/* Yunqiao: geography and local circulation; leave working diagrams clean. */
+.yunqiao-page .yq-context,.yunqiao-page .yq-fieldwork,.yunqiao-page .yq-judgment,.yunqiao-page .yq-collaboration { position:relative; isolation:isolate; }
+.yunqiao-page .yq-context::before { content:""; position:absolute; inset:0 -3vw auto; height:34rem; z-index:-1; pointer-events:none; opacity:.27; background:linear-gradient(90deg,#18261cf5,#18261c82),url('assets/yunqiao/art/transport-engraving-web.webp') right top/cover; mask-image:linear-gradient(black 55%,transparent); }
+.yunqiao-page .yq-fieldwork::before { content:""; position:absolute; inset:0 -3vw; z-index:-1; pointer-events:none; background:radial-gradient(ellipse at 0% 15%,#566a3628,transparent 65%),repeating-linear-gradient(0deg,transparent 0 59px,#9dab8110 59px 60px); }
+.yunqiao-page .yq-judgment::before { content:""; position:absolute; inset:0 -3vw auto; height:48rem; z-index:-1; pointer-events:none; background:linear-gradient(180deg,#18261c00,#18261c 95%),linear-gradient(90deg,#18261ce8,#18261ca0 52%,#18261c3a),url('assets/yunqiao/art/market-engraving-web.webp') right top/auto 44rem no-repeat; }
+.yunqiao-page .yq-collaboration::before { content:""; position:absolute; inset:0 -3vw; z-index:-1; pointer-events:none; background:linear-gradient(100deg,#25331e55,transparent 75%),repeating-linear-gradient(90deg,transparent 0 99px,#a4b4840b 99px 100px); }
+
+@media(max-width:800px) {
+  .cr4-comparison { grid-template-columns:1fr; gap:1.2rem; }
+  .cr4-comparison-intro>p:last-child { max-width:38rem; }
+  .cr4-comparison-intro h3 br { display:none; }
+  .cr4-pitch li { grid-template-columns:8rem minmax(0,1fr); gap:1rem; }
+}
+@media(max-width:600px) {
+  .home-current .hobby-grid { grid-template-columns:1fr; gap:1.4rem; }
+  .home-current .hobby-grid article,.home-current .hobby-grid article:first-child,.home-current .hobby-grid article:last-child { display:block; padding:0 0 1.4rem; }
+  .home-current .hobby-grid article>p:last-child { max-width:none; }
+  .home-current .beyond-section::before { background-size:auto,auto,auto 50rem; background-position:center,center,right top; background-repeat:no-repeat; background-color:#27332e; }
+  .cr4-research-map { grid-template-columns:1fr; padding:1.5rem; gap:1rem; }
+  .cr4-research-map>i { display:none; }
+  .cr4-research-map>div+div { border-top:1px solid #9e907044; }
+  .cr4-research-map strong { font-size:1.35rem; margin:.35rem 0; }
+  .cr4-comparison { margin-top:2rem; }
+  .cr4-comparison-rows { padding:0 1.2rem; }
+  .cr4-pitch { padding:1.4rem; }
+  .cr4-pitch li { grid-template-columns:1fr; gap:.5rem; }
+  .cr4-pitch h4 { font-size:1.05rem; }
+  .cr4-pitch-close b { margin-inline:.3rem; }
+  .cr4-pitch-close p { font-size:.78rem; }
+  .citic-page .cr4-allocation::before { background-position:center,center,right top; }
+  .citic-page .cr-continuation::before { left:15%; opacity:.65; }
+  .sim-page #business::before { background-size:auto,auto,auto 30rem; }
+  .zd-page #process::before { background-size:auto,auto,auto 35rem; }
+  .hobby-photo-choices { gap:.45rem; }
+  .hobby-photo-choices button { font-size:.78rem; padding:.65rem .8rem; }
+}
