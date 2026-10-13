@@ -34,3 +34,10 @@
   .home-current .home-personal-motion { margin-top: .3rem; }
   .home-current .contact-email-address { font-size: 1.04rem; }
 }
+
+/* Public resume links. */
+.home-current .contact-resume-links { display: flex; flex-wrap: wrap; align-items: center; gap: .2rem 1.6rem; flex-basis: 100%; margin-top: .7rem; padding-top: .6rem; border-top: 1px solid var(--line); }
+.home-current .contact-resume-links a { display: inline-flex; align-items: center; gap: .6rem; min-height: 2.75rem; color: var(--ink-strong); font-size: .82rem; text-decoration: none; }
+.home-current .contact-resume-links a span { color: var(--accent); }
+.home-current .contact-resume-links a:hover { color: var(--accent); }
+.home-current .contact-resume-links a:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
